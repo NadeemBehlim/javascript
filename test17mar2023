@@ -1,0 +1,312 @@
+//1 Create an array called fruits that contains the following elements: "apple", "banana", "orange". Now check if "orange" is in the fruits array.
+
+
+let fruits = ["apple", "banana", "orange"];
+if (fruits.includes("orange")) {
+  console.log("The fruits array contains 'orange'.");
+} else {
+  console.log("The fruits array does not contain 'orange'.");
+}
+
+
+//2 Given an array of numbers, write a function that returns the sum of all the even numbers in the array.
+
+let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+function sumEvenNumbers(numbers) {
+    let sum = 0;
+    for (let i = 0; i < numbers.length; i++) {
+      if (numbers[i] % 2 === 0) { 
+        sum += numbers[i]; 
+      }
+    }
+    return sum;
+  }
+  let sumOfEvenNumbers = sumEvenNumbers(numbers);
+  console.log(sumOfEvenNumbers); 
+  // 3 Given two arrays of numbers, write a function that returns a new array that contains only the unique elements from both arrays.
+  
+
+let arr1 = [1, 2, 3, 4, 5];
+let arr2 = [3, 4, 5, 6, 7];
+function getUniqueElements(arr1, arr2) {
+
+    const combinedArray = [...arr1, ...arr2];
+    
+    let uniqueElements = new Set(combinedArray);
+
+    return Array.from(uniqueElements);
+  }
+
+let uniqueElements = getUniqueElements(arr1, arr2);
+console.log(uniqueElements); // Output: [1, 2, 3, 4, 5, 6, 7]
+
+ // 4 Given an array of strings, write a function that returns the longest string in the array.
+
+ let myArray = ["Saawariya", "Tamasha", "Barfi", "Sanju", "rockstar"];
+
+
+ function findLongestString(strArray) {
+    let longestStr = strArray[0];
+    for (let i = 1; i < strArray.length; i++) {
+      if (strArray[i].length > longestStr.length) {
+        longestStr = strArray[i];
+      }
+    }
+    return longestStr;
+  }
+  console.log(findLongestString(myArray)); 
+
+ // 5 Write a function that takes an array of numbers and returns the largest number in the array.
+
+ let myArray1 = [2, 5, 10, 7, 1];
+ 
+
+ function findLargestNumber(numArray) {
+    let largestNum = numArray[0]; 
+    for (let i = 1; i < numArray.length; i++) {
+      if (numArray[i] > largestNum) {
+        largestNum = numArray[i];
+      }
+    }
+    return largestNum;
+  }
+  console.log(findLargestNumber(myArray1));
+
+
+  // 6 Write a function that takes an array of numbers and returns a new array that only contains the even numbers from the original array.
+  
+
+  let myArray3 = [1, 2, 3, 4, 5, 6];
+  
+  function filterEvenNumbers(numArray) {
+    let evenArray = [];
+    for (let i = 0; i < numArray.length; i++) {
+      if (numArray[i] % 2 === 0) {
+        evenArray.push(numArray[i]);
+      }
+    }
+    return evenArray;
+  }
+  
+console.log(filterEvenNumbers(myArray3));
+
+// 7 Write a function that takes an array of strings and returns a new array that only contains strings with more than 5 characters.
+  
+let myArray4 = ["Saawariya", "Tamasha", "Barfi", "Sanju", "rockstar"];
+
+function filterLongStrings(strArray) {
+    let longStringsArray = [];
+    for (let i = 0; i < strArray.length; i++) {
+      if (strArray[i].length > 5) {
+        longStringsArray.push(strArray[i]);
+      }
+    }
+    return longStringsArray;
+  }
+  console.log(filterLongStrings(myArray4));
+
+  // 8 Write a function that takes two arrays of numbers and returns a new array that contains the intersection of the two arrays (i.e. only the numbers that appear in both arrays).
+
+  let array1 = [1, 2, 3, 4, 5];
+  let array2 = [3, 4, 5, 6, 7];
+  function findIntersection(arr1, arr2) {
+    let intersectionArray = [];
+    for (let i = 0; i < arr1.length; i++) {
+      for (let j = 0; j < arr2.length; j++) {
+        if (arr1[i] === arr2[j] && !intersectionArray.includes(arr1[i])) {
+          intersectionArray.push(arr1[i]);
+        }
+      }
+    }
+    return intersectionArray;
+  }
+  console.log(findIntersection(array1, array2));
+
+  // 9 Write a function that takes an array of numbers and returns a new array where each element is the square of the original element
+
+  let myArray5 = [1, 2, 3, 4, 5];
+  function squareArray(numArray) {
+    let squareArray = [];
+    for (let i = 0; i < numArray.length; i++) {
+      squareArray.push(numArray[i] * numArray[i]);
+    }
+    return squareArray;
+  }
+  
+
+console.log(squareArray(myArray5));
+
+// 10 Write a function that takes an array of numbers and returns the average of all the numbers in the array.
+
+let myNumbers = [4, 8, 15, 16, 23, 42];
+function average(numbers) {
+    let sum = 0;
+    for (let i = 0; i < numbers.length; i++) {
+      sum += numbers[i];
+    }
+    return sum / numbers.length;
+  }
+  
+let myAverage = average(myNumbers);
+console.log(myAverage);
+
+
+
+
+// 11 Write a function that takes an array of numbers and returns a new array that only contains numbers that are greater than 5. Use filter function
+
+let myNumbers1 = [3, 6, 9, 2, 8, 7, 4];
+
+function greaterThanFive(numbers) {
+    return numbers.filter(num => num > 5);
+  }
+  
+let myNewNumbers = greaterThanFive(myNumbers1);
+console.log(myNewNumbers);
+
+// 12 Write a function that takes an array of numbers and returns a new array where each element is the original element plus 1. use map function
+
+let myNumbers2 = [1, 2, 3, 4, 5];
+let myNewNumbers2 = addOne(myNumbers2);
+
+function addOne(numbers) {
+    return numbers.map(num => num + 1);
+  }
+  console.log(myNewNumbers2);
+  
+
+// 13 Write a function that takes an array of numbers and returns a new array that contains only the unique numbers using reduce.
+
+let myNumbers3 = [1, 2, 3, 4, 3, 2, 1, 5];
+let myUniqueNumbers = uniqueNumbers(myNumbers3);
+function uniqueNumbers(numbers) {
+    return numbers.reduce((unique, number) => {
+      if (!unique.includes(number)) {
+        unique.push(number);
+      }
+      return unique;
+    }, []);
+  }
+  
+console.log(myUniqueNumbers); 
+
+
+// 14 Write a function that takes an array of strings and returns the total number of characters in all the strings using reduce.
+
+let myStrings = ['hello', 'world', 'javascript'];
+let myCount = countCharacters(myStrings);
+
+function countCharacters(strings) {
+    return strings.reduce((count, string) => count + string.length, 0);
+  }
+  console.log(myCount);
+
+// 15 Write a function that takes an array of strings and sorts them by their length in ascending order.
+
+let myStrings1 = ['hello', 'world', 'javascript', 'coding'];
+let mySortedStrings = sortByLength(myStrings);
+function sortByLength(strings) {
+    return strings.sort((a, b) => a.length - b.length);
+  }
+  
+console.log(mySortedStrings);
+
+
+
+// 16 Write a function that takes an array of numbers and returns the second highest number.
+
+let myNumbers4 = [2, 5, 1, 9, 7, 4];
+let mySecondHighest = secondHighest(myNumbers4);
+function secondHighest(numbers) {
+    let highest = -Infinity;
+    let secondHighest = -Infinity;
+    
+    for (let i = 0; i < numbers.length; i++) {
+      let current = numbers[i];
+      if (current > highest) {
+        secondHighest = highest;
+        highest = current;
+      } else if (current > secondHighest && current < highest) {
+        secondHighest = current;
+      }
+    }
+    
+    return secondHighest;
+  }
+  
+console.log(mySecondHighest); 
+
+
+
+// 17 Write a function that takes an array of numbers and returns a new array with all the unique numbers.
+
+let myNumbers5 = [2, 5, 1, 9, 5, 2, 7, 4];
+let myUniqueNumbers1 = getUniqueNumbers(myNumbers);
+function getUniqueNumbers(numbers) {
+    let uniqueNumbers = [];
+    
+    for (let i = 0; i < numbers.length; i++) {
+      let current = numbers[i];
+      if (uniqueNumbers.indexOf(current) === -1) {
+        uniqueNumbers.push(current);
+      }
+    }
+    
+    return uniqueNumbers;
+  }
+  
+console.log(myUniqueNumbers);
+
+
+
+// 18 Write a function that takes an array of strings and returns a new array with only the strings that contain the letter "a".
+
+let myStrings2 = ["apple", "banana", "carrot", "date", "eggplant", "fig"];
+let myStringsContainingA = getStringsContainingA(myStrings2);
+function getStringsContainingA(strings) {
+    let containingA = [];
+    
+    for (let i = 0; i < strings.length; i++) {
+      let current = strings[i];
+      if (current.includes("a")) {
+        containingA.push(current);
+      }
+    }
+    
+    return containingA;
+  }
+  
+console.log(myStringsContainingA);
+
+
+// 19 Write a function that takes an array of numbers and returns a new array with the numbers sorted in ascending order.
+
+let myNumbers6 = [3, 5, 1, 7, 2, 4];
+let mySortedNumbers = sortNumbersAscending(myNumbers6);
+function sortNumbersAscending(numbers) {
+    return numbers.sort(function(a, b) {
+      return a - b;
+    });
+  }
+  
+console.log(mySortedNumbers);
+
+
+// 20 Write a function that takes an array of strings and flattens each string into an array of characters, then flattens the result into a single array.
+ 
+let myStrings4 = ["hello", "world"];
+let myFlattenedStrings = flattenStrings(myStrings4);
+function flattenStrings(strings) {
+    let characters = strings.map(str => str.split(''));
+    let flattened = [].concat(...characters);
+    return flattened;
+  }
+  
+console.log(myFlattenedStrings);
+
+
+
+
+
+
+    
