@@ -1,0 +1,31 @@
+/ que 1
+let str = ("helo code world");
+
+if (str.includes("code", 4)){
+  str = str.slice(0,4)+ str.slice(9,17)
+} else (
+  str
+)
+console.log(str)
+
+// Que 2
+let str1 = ("the quick brown fox");
+
+let words = str1.split(" ");
+
+for (let i = 0; i < words.length; i++) {
+  words[i] = words[i].charAt(0).toUpperCase() + words[i].slice(1);
+}
+console.log(words.join(" "));
+
+//Que 3 
+let num = (111111)
+let numStr = num.toString();
+    
+    for (let i = 1; i < numStr.length; i++) {
+      if (numStr[i] === numStr[0]) {
+         console.log(true);
+      }
+    }
+    
+ 
